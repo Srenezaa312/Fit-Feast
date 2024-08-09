@@ -1,0 +1,120 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WeightManagementFragment">
+
+    <!-- Scrollable Content -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <!-- CardView for Weight Metrics -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/cardViewWeightMetrics">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/textViewMinWeightLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Minimum Weight"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/textViewMinWeightValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/textViewMinWeightLabel"
+                app:layout_constraintTop_toBottomOf="@id/textViewMinWeightLabel"
+                android:layout_marginTop="4dp"
+                android:text="--"/>
+
+            <TextView
+                android:id="@+id/textViewMaxWeightLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Maximum Weight"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewMinWeightValue"
+                android:layout_marginTop="16dp"/>
+
+            <TextView
+                android:id="@+id/textViewMaxWeightValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/textViewMaxWeightLabel"
+                app:layout_constraintTop_toBottomOf="@id/textViewMaxWeightLabel"
+                android:layout_marginTop="4dp"
+                android:text="--"/>
+
+            <TextView
+                android:id="@+id/textViewAvgWeightLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Average Weight"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewMaxWeightValue"
+                android:layout_marginTop="16dp"/>
+
+            <TextView
+                android:id="@+id/textViewAvgWeightValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/textViewAvgWeightLabel"
+                app:layout_constraintTop_toBottomOf="@id/textViewAvgWeightLabel"
+                android:layout_marginTop="4dp"
+                android:text="--"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- History Header -->
+    <TextView
+        android:id="@+id/historyHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="History"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp" />
+
+    <!-- RecyclerView for Weight History -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewWeightHistory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        tools:listitem="@layout/item_weight_history" />
+
+    </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- FAB to Add Weight -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_gravity="bottom|end"
+        android:backgroundTint="@color/secondaryColor"
+        app:srcCompat="@drawable/ic_add_circle_outline" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

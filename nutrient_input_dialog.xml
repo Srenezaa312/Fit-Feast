@@ -1,0 +1,156 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@color/white">
+
+    <!-- Calories Input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/caloriesInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxStrokeColor="@color/secondaryTextColor"
+        app:hintTextColor="@color/secondaryTextColor"
+        android:layout_marginBottom="8dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/caloriesInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Calories (Kcal)"
+            android:inputType="numberDecimal"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Nutrients Input and Grams Layout -->
+
+    <!-- Carbohydrates Input and Grams Layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp">
+
+        <!-- Carbohydrates Percentage Input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/carbsPercentageInputLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:boxStrokeColor="@color/secondaryTextColor"
+            app:hintTextColor="@color/secondaryTextColor"
+            android:layout_marginEnd="8dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/carbsPercentageInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Carbs (%)"
+                android:inputType="numberDecimal"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Carbohydrates Grams Display -->
+        <TextView
+            android:id="@+id/carbsGrams"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Carbs (gm): 0"
+            android:gravity="end"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+    </LinearLayout>
+
+
+
+    <!-- Fat Input and Grams Layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp">
+
+        <!-- Carbohydrates Percentage Input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/fatPercentageInputLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:boxStrokeColor="@color/secondaryTextColor"
+            app:hintTextColor="@color/secondaryTextColor"
+            android:layout_marginEnd="8dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/fatPercentageInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Fat (%)"
+                android:inputType="numberDecimal"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Carbohydrates Grams Display -->
+        <TextView
+            android:id="@+id/fatGrams"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Fat (gm): 0"
+            android:gravity="end"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+    </LinearLayout>
+
+
+
+    <!-- Protein Input and Grams Layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp">
+
+        <!-- Protein Percentage Input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/proteinPercentageInputLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:boxStrokeColor="@color/secondaryTextColor"
+            app:hintTextColor="@color/secondaryTextColor"
+            android:layout_marginEnd="8dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/proteinPercentageInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Protein (%)"
+                android:inputType="numberDecimal"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Carbohydrates Grams Display -->
+        <TextView
+            android:id="@+id/proteinGrams"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Protein (gm): 0"
+            android:gravity="end"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/errorMessageTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Total percentage must equal 100%"
+        android:textColor="@color/errorColor"
+        android:visibility="gone"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="8dp"/>
+
+
+
+</LinearLayout>

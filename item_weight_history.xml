@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Date and Time -->
+        <TextView
+            android:id="@+id/textViewDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="11/04/2024"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="13:00"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toEndOf="@+id/textViewDate"
+            app:layout_constraintTop_toTopOf="@+id/textViewDate"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewDate" />
+
+        <!-- BMI Header -->
+        <TextView
+            android:id="@+id/textViewBMIHeader"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="BMI"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewDate" />
+
+        <!-- BMI Value -->
+        <TextView
+            android:id="@+id/textViewBMI"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="24.6"
+            app:layout_constraintStart_toStartOf="@+id/textViewBMIHeader"
+            app:layout_constraintTop_toBottomOf="@+id/textViewBMIHeader" />
+
+        <!-- Body Fat Percentage Header -->
+        <TextView
+            android:id="@+id/textViewBodyFatPercentageHeader"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Body Fat (%)"
+            android:textStyle="bold"
+            android:layout_marginStart="55dp"
+            app:layout_constraintStart_toEndOf="@+id/textViewBMI"
+            app:layout_constraintTop_toTopOf="@+id/textViewBMIHeader"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewBMIHeader" />
+
+        <!-- Body Fat Percentage Value -->
+        <TextView
+            android:id="@+id/textViewBodyFatPercentage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="20.56%"
+            app:layout_constraintStart_toStartOf="@+id/textViewBodyFatPercentageHeader"
+            app:layout_constraintTop_toBottomOf="@+id/textViewBodyFatPercentageHeader" />
+
+        <!-- Weight Value -->
+        <TextView
+            android:id="@+id/textViewWeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="80 kg"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textViewBMI" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

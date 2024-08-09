@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardElevation="4dp"
+    app:cardCornerRadius="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/medicationName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:text="Medication Name" />
+
+        <!-- First Row: Instructions, Pill Quantity, and Calendar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="8dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_instruction"
+                android:contentDescription="Instructions"/>
+
+            <TextView
+                android:id="@+id/medicationInstructions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="After Food"
+                android:layout_marginStart="8dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_pill"
+                android:contentDescription="Pill Quantity"
+                android:layout_marginStart="16dp"/>
+
+            <TextView
+                android:id="@+id/medicationPillQuantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2 Pills"
+                android:layout_marginStart="8dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_calendar"
+                android:contentDescription="Start Date"
+                android:layout_marginStart="16dp"/>
+
+            <TextView
+                android:id="@+id/medicationStartDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2023-01-01"
+                android:layout_marginStart="8dp"/>
+        </LinearLayout>
+
+        <!-- Second Row: Repeat Days -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="8dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_repeat"
+                android:contentDescription="Repeat Days"/>
+
+            <TextView
+                android:id="@+id/medicationRepeatDays"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mon, Wed, Fri"
+                android:layout_marginStart="8dp"/>
+        </LinearLayout>
+
+        <!-- Third Row: Notes -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="8dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_notes"
+                android:contentDescription="Notes"/>
+
+            <TextView
+                android:id="@+id/medicationNotes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Take with water"
+                android:layout_marginStart="8dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
