@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "539308547210",
+    "project_id": "fitfeast-a1931",
+    "storage_bucket": "fitfeast-a1931.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:539308547210:android:d53d3416593b8da48c2173",
+        "android_client_info": {
+          "package_name": "com.example.fitfeast"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDAH1SMNIZb5Q0g78U6-yEnY87rliPL32w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
